@@ -29,6 +29,7 @@
 
   <section class="main-content">
 
+    <p><span style="color: red;">Important Notice:</span> Due to the rate limitation of anonymous github, there is only a subset of demos in this page, for full demos, you can refer to <a href="https://vectokdemo.github.io/VecTok">this anonymous site</a> </p>
     <h2>Contents</h2>
     <ol>
       <li><a href="#abstract">Abstract</a></li>
@@ -106,7 +107,7 @@
 
     //2.1
     let draw_tts_table=function (dirname) {
-      let prompts=['shantianfang_baimei','30','LY-8','00993_single','不知名英文发音人2','LJ049-0124_24K']
+      let prompts=['shantianfang_baimei','30','00993_single','LJ049-0124_24K']
       let table=`
         <tr>
           ${mkcell(2,2)}
@@ -151,9 +152,9 @@
       let systems=['bark','valle','vectok']
       let files=[
         ['30','而当下的中国产品不仅追求性价比，更需要对世界有影响力的。','30-6'],
-        ['LY-8','或许，当下就是一个更加需要致敬工程师精神。','LY-8-0'],
+        // ['LY-8','或许，当下就是一个更加需要致敬工程师精神。','LY-8-0'],
         ['00993_single','The army found the people in poverty and left them in comparative wealth.','00993_single-en_4'],
-        ['TIM_315','During the period the Commission was giving thought to this situation.','TIM_315-en_2'],
+        // ['TIM_315','During the period the Commission was giving thought to this situation.','TIM_315-en_2'],
       ]
       
       for (let file in files){
@@ -185,12 +186,6 @@
           ${mkaudiocell(`tts_demos/bpe_ablation/nobpe/1`)}
           ${mkaudiocell(`tts_demos/bpe_ablation/bpe/1`)}
         </tr>
-        <tr>
-          ${mkaudiocell(`tts_demos/bpe_ablation/prompts/2`)}
-          ${mkcell(1,1,'首先映入眼帘的是小桌上那个带黑边的像框。晓霞头稍稍歪着，烂漫的笑容像春天的鲜花和夏日里明媚的太阳。那双美丽的眼睛欣喜地直望着他，亲爱的人，你终于来了！')}
-          ${mkaudiocell(`tts_demos/bpe_ablation/nobpe/2`)}
-          ${mkaudiocell(`tts_demos/bpe_ablation/bpe/2`)}
-        </tr>
       `
       return table
     }
@@ -198,8 +193,8 @@
 
     //3
     let draw_vc=function (){
-      let srcs=['404042','0302001002','hvd_701_1','king_033_600482']
-      let tgts=['993','LY','MP105','TIM']
+      let srcs=['404042','king_033_600482']
+      let tgts=['MP105','TIM']
       table=`
       <tr>
         ${mkcell(2,3,'')}
@@ -238,7 +233,7 @@
       let datas=[
         ['YOU1000000156_S0000090','第二次世界大战给这个国家带来了一种我们自那以后从未见过的爱国主义情绪。','Second World War brought about<br/>a sense of patriotism in this country,<br/>that we have not seen since.','第二次世界大战带来了这个国家的爱国主义，从那以后，我们就没见过了。'],
         ['POD1000000012_S0000054','我们别想这件事了。',"Let's stop and think here.",'让我们在这里停下来思考。'],
-        ['POD1000000024_S0000097','对我来说重要的是，我们能够一起做出如此重大的决定。','It was important to me that</br>we were able to make a decision this big together.','对我来说，重要的是，我们能够一起做出这么大的决定。']
+        // ['POD1000000024_S0000097','对我来说重要的是，我们能够一起做出如此重大的决定。','It was important to me that</br>we were able to make a decision this big together.','对我来说，重要的是，我们能够一起做出这么大的决定。']
       ]
       table=`
       <tr>
